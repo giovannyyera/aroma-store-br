@@ -1,0 +1,61 @@
+
+<main class="admin-login-page">
+
+  <section class="login-card">
+
+    <div class="login-header">
+      <div class="login-icon">
+        <i class="bi bi-lock"></i>
+      </div>
+
+      <h1>Administrador</h1>
+      <p>Informe suas credenciais .</p>
+    </div>
+
+    <form (ngSubmit)="entrar()" #loginForm="ngForm">
+
+      <div class="form-field">
+        <label for="username">Usuário</label>
+
+        <input
+          id="username"
+          type="text"
+          name="username"
+          [(ngModel)]="username"
+          placeholder="Digite seu usuário"
+          autocomplete="username"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Senha</label>
+
+        <input
+          id="password"
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Digite sua senha"
+          autocomplete="current-password"
+          required
+        />
+      </div>
+
+      <div class="login-error" *ngIf="erro()" role="alert">
+        {{ erro() }}
+      </div>
+
+      <button
+        type="submit"
+        class="login-button"
+        [disabled]="enviando() || loginForm.invalid"
+      >
+        {{ enviando() ? 'Entrando...' : 'ENTRAR' }}
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
