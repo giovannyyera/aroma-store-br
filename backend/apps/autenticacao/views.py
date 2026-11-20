@@ -20,7 +20,7 @@ class LoginAdminView(APIView):
             raise_exception=True
         )
 
-        usuario = authenticate(
+        usuario = authenticate( #comparacao a senha do hash salvo no banco de dados 
             username=serializer.validated_data["username"],
             password=serializer.validated_data["password"],
         )
