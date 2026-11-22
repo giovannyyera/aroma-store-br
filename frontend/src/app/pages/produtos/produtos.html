@@ -16,7 +16,6 @@
       <a routerLink="/carrinho">Carrinho</a>
     </nav>
 
-    <!-- Ícones -->
     <div class="header-actions">
       <button type="button" class="icon-button"
               aria-label="Pesquisar"
@@ -60,7 +59,6 @@
     </div>
   </div>
 
-  <!-- Busca -->
   <div class="search-panel" *ngIf="searchOpen">
     <form (ngSubmit)="submitSearch()">
       <input
@@ -74,7 +72,6 @@
     </form>
   </div>
 
-  <!-- Menu mobile -->
   <nav id="mobile-navigation"
        class="mobile-nav"
        *ngIf="menuOpen"
@@ -87,7 +84,6 @@
 
 <main class="catalog-page">
 
-  <!-- Introdução do catálogo -->
   <section class="catalog-intro">
     <div class="catalog-container">
 
@@ -105,7 +101,6 @@
     </div>
   </section>
 
-  <!-- Produtos -->
   <section class="catalog-section">
     <div class="catalog-container">
 
@@ -155,13 +150,11 @@
   </div>
 </div>
 
-<!-- Carregando produtos -->
 <div class="catalog-loading" *ngIf="carregando()">
   <div class="loading-spinner"></div>
   <p>Carregando nossa coleção...</p>
 </div>
 
-<!-- Erro ao consultar a API -->
 <div class="catalog-error" *ngIf="!carregando() && erro()">
   <p>{{ erro() }}</p>
 
@@ -173,7 +166,6 @@
   </button>
 </div>
 
-      <!-- Lista de produtos -->
       <div class="products-grid" *ngIf="!carregando() && !erro() && produtos().length > 0">
 
         <article
@@ -181,7 +173,6 @@
           *ngFor="let produto of produtos()"
         >
 
-          <!-- Imagem -->
           <a
             class="product-image"
             [routerLink]="['/produtos', produto.id]"
@@ -195,7 +186,6 @@
               loading="lazy"
             />
 
-            <!-- Caso o produto não tenha imagem -->
             <div
               class="product-no-image"
               *ngIf="!produto.imagem_principal"
@@ -213,7 +203,6 @@
 
           </a>
 
-          <!-- Informações -->
           <div class="product-info">
 
             <span class="product-category">
@@ -241,7 +230,6 @@
               }}
             </p>
 
-            <!-- Acesso à página individual -->
             <a
               class="product-button"
               [routerLink]="['/produtos', produto.id]"
@@ -256,7 +244,6 @@
 
       </div>
 
-      <!-- Catálogo vazio -->
       <div
         class="catalog-empty"
         *ngIf="!carregando() && !erro() && produtos().length === 0"     
@@ -292,7 +279,6 @@
 
       </div>
 
-      <!-- Paginação -->
       <nav
         class="catalog-pagination"
         *ngIf="totalProdutos() > 0"
@@ -326,7 +312,6 @@
     </div>
   </section>
 
-  <!-- Faixa institucional -->
   <section class="catalog-footer-message">
     <p>Feito à mão, com calma, paz e amor.</p>
   </section>

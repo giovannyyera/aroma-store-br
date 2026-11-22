@@ -24,7 +24,6 @@
 
   <div class="reports-container">
 
-    <!-- TÍTULO -->
     <section class="reports-heading">
 
       <div class="heading-left">
@@ -42,22 +41,18 @@
 
     </section>
 
-    <!-- ERRO -->
     <div class="reports-error" *ngIf="erro()" role="alert">
       <i class="bi bi-exclamation-circle"></i>
       <span>{{ erro() }}</span>
     </div>
 
-    <!-- CARREGAMENTO -->
     <div class="reports-loading" *ngIf="carregando()">
       <div class="loading-spinner"></div>
       <p>Carregando relatórios...</p>
     </div>
 
-    <!-- RELATÓRIOS -->
     <div *ngIf="!carregando()">
 
-      <!-- RESUMO GERAL -->
       <section class="summary-section" *ngIf="resumo() as resumo">
 
         <div class="section-heading">
@@ -69,7 +64,6 @@
 
         <div class="summary-grid">
 
-          <!-- TOTAL DE PEDIDOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon total-icon">
@@ -88,7 +82,6 @@
             </span>
           </article>
 
-          <!-- PENDENTES -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon pending-icon">
@@ -107,7 +100,6 @@
             </span>
           </article>
 
-          <!-- CONFIRMADOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon confirmed-icon">
@@ -126,7 +118,6 @@
             </span>
           </article>
 
-          <!-- CONCLUÍDOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon completed-icon">
@@ -145,7 +136,6 @@
             </span>
           </article>
 
-          <!-- CANCELADOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon canceled-icon">
@@ -164,7 +154,6 @@
             </span>
           </article>
 
-          <!-- FATURAMENTO -->
           <article class="summary-card revenue-card">
             <div class="summary-card-top">
               <span class="summary-icon revenue-icon">
@@ -187,7 +176,6 @@
 
       </section>
 
-      <!-- PRODUTOS VENDIDOS -->
       <section class="report-panel">
 
         <div class="panel-heading">
@@ -259,7 +247,6 @@
 
       </section>
 
-      <!-- VENDAS POR CATEGORIA -->
       <section class="report-panel">
 
         <div class="panel-heading">
@@ -326,7 +313,6 @@
 
       </section>
 
-      <!-- VENDAS MENSAIS -->
       <section class="report-panel">
 
         <div class="panel-heading">
@@ -411,7 +397,6 @@
 
 <main class="admin-reports">
 
-  <!-- HEADER ADMINISTRATIVO -->
   <header class="admin-header">
     <div class="admin-header-content">
 
@@ -434,7 +419,6 @@
 
   <div class="reports-container">
 
-    <!-- TÍTULO -->
     <section class="reports-heading">
 
       <div class="heading-left">
@@ -472,16 +456,13 @@
   </button>
 </div>
 
-    <!-- CARREGAMENTO -->
     <div class="reports-loading" *ngIf="carregando()">
       <div class="loading-spinner"></div>
       <p>Carregando relatórios...</p>
     </div>
 
-    <!-- RELATÓRIOS -->
     <div *ngIf="!carregando() && !erro()">
 
-      <!-- RESUMO GERAL --> 
       <section class="summary-section" *ngIf="resumo() as resumo">
 
         <div class="section-heading">
@@ -493,7 +474,6 @@
 
         <div class="summary-grid">
 
-          <!-- TOTAL DE PEDIDOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon total-icon">
@@ -512,7 +492,6 @@
             </span>
           </article>
 
-          <!-- PENDENTES -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon pending-icon">
@@ -531,7 +510,6 @@
             </span>
           </article>
 
-          <!-- CONFIRMADOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon confirmed-icon">
@@ -550,7 +528,6 @@
             </span>
           </article>
 
-          <!-- CONCLUÍDOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon completed-icon">
@@ -569,7 +546,6 @@
             </span>
           </article>
 
-          <!-- CANCELADOS -->
           <article class="summary-card">
             <div class="summary-card-top">
               <span class="summary-icon canceled-icon">
@@ -588,7 +564,6 @@
             </span>
           </article>
 
-          <!-- FATURAMENTO -->
           <article class="summary-card revenue-card">
             <div class="summary-card-top">
               <span class="summary-icon revenue-icon">
@@ -611,7 +586,6 @@
 
       </section>
 
-      <!-- PRODUTOS VENDIDOS -->
       <section class="report-panel">
 
         <div class="panel-heading">
@@ -683,7 +657,6 @@
 
       </section>
 
-      <!-- VENDAS POR CATEGORIA -->
       <section class="report-panel">
 
         <div class="panel-heading">
@@ -750,7 +723,6 @@
 
       </section>
 
-      <!-- VENDAS MENSAIS -->
       <section class="report-panel">
 
         <div class="panel-heading">

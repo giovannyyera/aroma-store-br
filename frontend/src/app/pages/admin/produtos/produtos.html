@@ -1,7 +1,6 @@
 
 <main class="admin-products">
 
-  <!-- Cabeçalho administrativo -->
   <header class="admin-header">
     <div class="admin-header-content">
 
@@ -24,7 +23,6 @@
 
   <div class="products-container">
 
-    <!-- Título da página -->
     <section class="products-heading">
 
       <div class="heading-left">
@@ -48,7 +46,6 @@
 
     </section>
 
-    <!-- Mensagens de erro -->
     <div class="products-error" *ngIf="erro()" role="alert">
       <i class="bi bi-exclamation-circle"></i>
       <span>{{ erro() }}</span>
@@ -62,7 +59,6 @@
       </button>
     </div>
 
-    <!-- Filtros -->
     <section class="products-filter-panel">
 
       <div class="filter-search">
@@ -156,13 +152,11 @@
         </span>
       </div>
 
-      <!-- Carregamento -->
       <div class="products-loading" *ngIf="carregando()">
         <div class="loading-spinner"></div>
         <p>Carregando produtos...</p>
       </div>
 
-      <!-- Tabela -->
       <div
         class="table-wrapper"
         *ngIf="!carregando() && !erro() && produtos().length > 0"
@@ -187,7 +181,6 @@
 
             <tr *ngFor="let produto of produtos()">
 
-              <!-- Imagem -->
               <td>
                 <div class="product-thumbnail">
 
@@ -206,27 +199,22 @@
                 </div>
               </td>
 
-              <!-- ID -->
               <td class="product-id">
                 #{{ produto.id }}
               </td>
 
-              <!-- Nome -->
               <td class="product-name">
                 {{ produto.nome }}
               </td>
 
-              <!-- Categoria -->
               <td class="product-category">
                 {{ produto.categoria_nome || 'Sem categoria' }}
               </td>
 
-              <!-- Preço -->
               <td class="product-price">
                 R$ {{ produto.preco | number:'1.2-2' }}
               </td>
 
-              <!-- Estoque -->
               <td>
                 <span
                   class="stock-badge"
@@ -246,7 +234,6 @@
                 </span>
               </td>
 
-              <!-- Status -->
               <td>
                 <span
                   class="status-badge"
@@ -258,7 +245,6 @@
                 </span>
               </td>
 
-              <!-- Ações -->
               <td>
                 <div class="product-actions">
 
@@ -315,7 +301,6 @@
         </table>
       </div>
 
-      <!-- Sem resultados -->
       <div
         class="products-empty"
         *ngIf="!carregando() && !erro() && produtos().length === 0"
@@ -339,7 +324,6 @@
         </button>
       </div>
 
-      <!-- Rodapé -->
       <div
         class="products-table-footer"
         *ngIf="!carregando() && !erro()"

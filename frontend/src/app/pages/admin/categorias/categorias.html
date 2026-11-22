@@ -1,7 +1,6 @@
 
 <main class="admin-categories">
 
-  <!-- Header administrativo -->
   <header class="admin-header">
     <div class="admin-header-content">
 
@@ -27,7 +26,6 @@
 
   <div class="categories-container">
 
-    <!-- Título e ação principal -->
     <section class="categories-heading">
 
       <div class="heading-left">
@@ -55,7 +53,6 @@
 
     </section>
 
-    <!-- Mensagem de erro -->
     <div
       class="categories-error"
       *ngIf="erro()"
@@ -65,7 +62,6 @@
       <span>{{ erro() }}</span>
     </div>
 
-    <!-- Tabela -->
     <section class="categories-panel">
 
       <div class="categories-loading" *ngIf="carregando()">
@@ -126,7 +122,6 @@
               <td>
                 <div class="category-actions">
 
-                  <!-- Editar -->
                   <a
                     class="action-button edit-button"
                     [routerLink]="[
@@ -139,7 +134,6 @@
                     <span>Editar</span>
                   </a>
 
-                  <!-- Desativar -->
                   <button
                     *ngIf="categoria.ativo"
                     type="button"
@@ -150,7 +144,6 @@
                     <span>Desativar</span>
                   </button>
 
-                  <!-- Ativar -->
                   <button
                     *ngIf="!categoria.ativo"
                     type="button"
@@ -172,7 +165,6 @@
 
       </div>
 
-      <!-- Nenhuma categoria -->
       <div
         class="categories-empty"
         *ngIf="
@@ -201,7 +193,6 @@
         </a>
       </div>
 
-      <!-- Rodapé da tabela -->
       <div class="categories-table-footer" *ngIf="!carregando()">
         <span>
           Exibindo {{ categorias().length }}

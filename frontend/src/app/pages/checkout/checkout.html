@@ -6,19 +6,16 @@
   </div>
 
   <div class="header-main">
-    <!-- Logo original -->
     <a routerLink="/" class="header-logo" aria-label="Página inicial">
       <img src="Logo.png" alt="Ateliê Casa Sensorial" />
     </a>
 
-    <!-- Navegação desktop -->
     <nav class="header-nav" aria-label="Navegação principal">
       <a routerLink="/">Inicio</a>
       <a routerLink="/produtos">Produtos</a>
       <a routerLink="/carrinho">Carrinho</a>
     </nav>
 
-    <!-- Ícones -->
     <div class="header-actions">
       <button type="button" class="icon-button"
               aria-label="Pesquisar"
@@ -75,7 +72,6 @@
     </form>
   </div>
 
-  <!-- Menu mobile -->
   <nav id="mobile-navigation"
        class="mobile-nav"
        *ngIf="menuOpen"
@@ -91,7 +87,6 @@
 
   <div class="checkout-container">
 
-    <!-- Cabeçalho da página -->
     <div class="checkout-heading">
 
       <a routerLink="/carrinho" class="checkout-back">
@@ -119,7 +114,6 @@
 
     </div>
 
-    <!-- Etapas -->
     <div class="checkout-steps">
 
       <div class="checkout-step completed">
@@ -158,7 +152,6 @@
 
     </div>
 
-    <!-- Carrinho vazio -->
     <section
       class="checkout-empty"
       *ngIf="carrinhoService.itens().length === 0 && !pedidoCriado()"
@@ -180,7 +173,6 @@
       </a>
     </section>
 
-    <!-- Formulário -->
     <form
       #checkoutForm="ngForm"
       *ngIf="carrinhoService.itens().length > 0 && !pedidoCriado()"
@@ -188,10 +180,8 @@
       class="checkout-layout"
     >
 
-      <!-- Coluna do formulário -->
       <div class="checkout-form-column">
 
-        <!-- Dados pessoais -->
         <section class="checkout-card">
 
           <div class="card-heading">
@@ -287,7 +277,6 @@
 
         </section>
 
-        <!-- Endereço -->
         <section class="checkout-card">
 
           <div class="card-heading">
@@ -433,7 +422,6 @@
 
         </section>
 
-        <!-- Observações -->
         <section class="checkout-card">
 
           <div class="card-heading">
@@ -467,7 +455,6 @@
 
       </div>
 
-      <!-- Resumo à direita -->
       <aside class="checkout-summary">
 
         <div class="summary-title">
@@ -558,7 +545,6 @@
             o atendimento.
           </p>
 
-          <!-- Erros da API -->
           <div
             class="checkout-error"
             *ngIf="erro()"
@@ -600,7 +586,6 @@
 
     </form>
 
-    <!-- Confirmação -->
     <section
       class="checkout-success"
       *ngIf="pedidoCriado()"

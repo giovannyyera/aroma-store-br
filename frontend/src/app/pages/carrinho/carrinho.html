@@ -6,19 +6,16 @@
   </div>
 
   <div class="header-main">
-    <!-- Logo original -->
     <a routerLink="/" class="header-logo" aria-label="Página inicial">
       <img src="Logo.png" alt="Ateliê Casa Sensorial" />
     </a>
 
-    <!-- Navegação desktop -->
     <nav class="header-nav" aria-label="Navegação principal">
       <a routerLink="/">Inicio</a>
       <a routerLink="/produtos">Produtos</a>
       <a routerLink="/carrinho">Carrinho</a>
     </nav>
 
-    <!-- Ícones -->
     <div class="header-actions">
       <button type="button" class="icon-button"
               aria-label="Pesquisar"
@@ -75,7 +72,6 @@
     </form>
   </div>
 
-  <!-- Menu mobile -->
   <nav id="mobile-navigation"
        class="mobile-nav"
        *ngIf="menuOpen"
@@ -103,7 +99,6 @@
     </div>
 
 
-<!-- Carrinho vazio -->
 <section
   class="empty-cart"
   *ngIf="carrinhoService.itens().length === 0"
@@ -133,7 +128,6 @@
 </section>
 
 
-    <!-- Carrinho com produtos -->
     <div
       class="cart-layout"
       *ngIf="carrinhoService.itens().length > 0"

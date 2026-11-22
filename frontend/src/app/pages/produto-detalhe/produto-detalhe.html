@@ -6,19 +6,16 @@
   </div>
 
   <div class="header-main">
-    <!-- Logo original -->
     <a routerLink="/" class="header-logo" aria-label="Página inicial">
       <img src="Logo.png" alt="Ateliê Casa Sensorial" />
     </a>
 
-    <!-- Navegação desktop -->
     <nav class="header-nav" aria-label="Navegação principal">
       <a routerLink="/">Inicio</a>
       <a routerLink="/produtos">Produtos</a>
       <a routerLink="/carrinho">Carrinho</a>
     </nav>
 
-    <!-- Ícones -->
     <div class="header-actions">
       <button type="button" class="icon-button"
               aria-label="Pesquisar"
@@ -62,7 +59,6 @@
     </div>
   </div>
 
-  <!-- Busca -->
   <div class="search-panel" *ngIf="searchOpen">
     <form (ngSubmit)="submitSearch()">
       <input
@@ -76,7 +72,6 @@
     </form>
   </div>
 
-  <!-- Menu mobile -->
   <nav id="mobile-navigation"
        class="mobile-nav"
        *ngIf="menuOpen"
@@ -88,12 +83,10 @@
 </header>
 <main class="product-page">
 
-  <!-- Carregamento -->
   <div class="page-status" *ngIf="carregando()">
     <p>Carregando produto...</p>
   </div>
 
-  <!-- Erro -->
   <div class="page-status" *ngIf="!carregando() && erro()">
     <h2>Não foi possível abrir o produto.</h2>
     <p>{{ erro() }}</p>
@@ -104,7 +97,6 @@
 
     <div class="product-container">
 
-      <!-- Navegação -->
       <nav class="breadcrumb" aria-label="Caminho da página">
         <a routerLink="/">Início</a>
         <span>›</span>
@@ -113,15 +105,12 @@
         <span>{{ item.nome }}</span>
       </nav>
 
-      <!-- Estrutura principal -->
       <div class="product-layout">
 
-        <!-- Galeria de imagens -->
         <section class="product-gallery">
 
           <div class="gallery-wrapper">
 
-            <!-- Miniaturas laterais -->
             <div
               class="gallery-thumbs"
               *ngIf="item.imagens && item.imagens.length > 1"
@@ -143,7 +132,6 @@
               </button>
             </div>
 
-            <!-- Imagem principal -->
             <div class="gallery-main">
 
               <img
@@ -173,7 +161,6 @@
 
         </section>
 
-        <!-- Informações centrais -->
         <section class="product-information">
 
           <span class="product-category">
@@ -228,7 +215,6 @@
 
         </section>
 
-        <!-- Caixa de compra -->
         <aside class="purchase-card">
 
           <div class="purchase-price">
@@ -271,7 +257,6 @@
 
           <div class="purchase-divider"></div>
 
-          <!-- Quantidade -->
           <div class="quantity-section" *ngIf="item.estoque > 0">
 
             <label>Quantidade</label>
@@ -308,7 +293,6 @@
             </strong>
           </div>
 
-          <!-- Ações de compra -->
           <button
             type="button"
             class="btn-add-cart"
@@ -376,7 +360,6 @@
 
       </div>
 
-      <!-- Descrição completa -->
       <section id="descricao-completa" class="product-description-section">
 
         <div class="section-heading">
@@ -391,7 +374,6 @@
 
       </section>
 
-      <!-- Voltar -->
       <div class="return-catalog">
         <a routerLink="/produtos">
           ← Voltar para todos os produtos

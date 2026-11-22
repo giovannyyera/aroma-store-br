@@ -1,7 +1,6 @@
 
 <main class="admin-category-form-page">
 
-  <!-- Header administrativo -->
   <header class="admin-header">
     <div class="admin-header-content">
 
@@ -25,10 +24,8 @@
     </div>
   </header>
 
-  <!-- Conteúdo -->
   <div class="category-form-container">
 
-    <!-- Caminho -->
     <nav class="breadcrumb" aria-label="Navegação">
       <a routerLink="/admin">Painel</a>
       <i class="bi bi-chevron-right"></i>
@@ -44,7 +41,6 @@
       </span>
     </nav>
 
-    <!-- Título -->
     <section class="page-heading">
 
       <div class="heading-left">
@@ -75,7 +71,6 @@
 
     </section>
 
-    <!-- Erro -->
     <div
       class="form-error"
       *ngIf="erro()"
@@ -85,13 +80,11 @@
       <span>{{ erro() }}</span>
     </div>
 
-    <!-- Carregamento -->
     <div class="form-loading" *ngIf="carregando()">
       <div class="loading-spinner"></div>
       <p>Carregando informações...</p>
     </div>
 
-    <!-- Formulário -->
     <form
       *ngIf="!carregando()"
       #categoriaForm="ngForm"
@@ -112,7 +105,6 @@
 
       <div class="form-fields">
 
-        <!-- Nome -->
         <div class="form-field">
 
           <label for="categoria-nome">
@@ -143,7 +135,6 @@
 
         </div>
 
-        <!-- Descrição -->
         <div class="form-field">
 
           <label for="categoria-descricao">
@@ -163,7 +154,6 @@
 
         </div>
 
-        <!-- Status -->
         <div class="category-status-section">
 
           <div class="status-information">
@@ -195,7 +185,6 @@
 
       </div>
 
-      <!-- Rodapé -->
       <div class="form-actions">
 
         <a

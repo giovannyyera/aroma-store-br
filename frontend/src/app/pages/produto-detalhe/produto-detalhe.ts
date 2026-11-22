@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 import {
   ActivatedRoute,
@@ -23,7 +22,6 @@ import { Produto } from '../../models/catalogo.model';
   selector: 'app-produto-detalhe',
   imports: [
     CommonModule,
-    FormsModule,
     RouterLink
   ],
   templateUrl: './produto-detalhe.html',
@@ -31,7 +29,6 @@ import { Produto } from '../../models/catalogo.model';
 })
 export class ProdutoDetalhe implements OnInit {
 
-  // Dados do produto
   produto = signal<Produto | null>(null);
   carregando = signal(true);
   erro = signal('');
@@ -70,12 +67,10 @@ export class ProdutoDetalhe implements OnInit {
     console.log('Pesquisa:', term);
   }
 
-  // Contador do header
   get cartCount(): number {
     return this.carrinhoService.quantidadeTotal();
   }
 
-  // Imagem selecionada na galeria
   imagemSelecionada = computed(() => {
     const produto = this.produto();
 
@@ -95,7 +90,6 @@ export class ProdutoDetalhe implements OnInit {
     return produto.imagem_principal || null;
   });
 
-  // Quantidade deste produto já presente no carrinho
   quantidadeNoCarrinho = computed(() => {
     const produto = this.produto();
 
@@ -110,7 +104,6 @@ export class ProdutoDetalhe implements OnInit {
     return item?.quantidade ?? 0;
   });
 
-  // Quantidade que ainda pode ser adicionada
   quantidadeDisponivel = computed(() => {
     const produto = this.produto();
 
@@ -135,7 +128,6 @@ limiteNoCarrinho = computed(() => {
     this.quantidadeDisponivel() <= 0;
 });
 
-  // Subtotal da seleção
   subtotal = computed(() => {
     const produto = this.produto();
 
@@ -161,7 +153,6 @@ limiteNoCarrinho = computed(() => {
     });
   }
 
-  // Buscar produto no Django
   carregarProduto(id: number): void {
     this.carregando.set(true);
     this.erro.set('');
@@ -185,26 +176,22 @@ limiteNoCarrinho = computed(() => {
     });
   }
 
-  // Trocar imagem principal
   selecionarImagem(index: number): void {
     this.indiceImagem.set(index);
   }
 
-  // Aumentar quantidade
   aumentarQuantidade(): void {
     if (this.quantidade() < this.quantidadeDisponivel()) {
       this.quantidade.update(valor => valor + 1);
     }
   }
 
-  // Diminuir quantidade
   diminuirQuantidade(): void {
     if (this.quantidade() > 1) {
       this.quantidade.update(valor => valor - 1);
     }
   }
 
-  // Adicionar a quantidade selecionada
   private adicionarSelecionados(): boolean {
     const produto = this.produto();
 
@@ -232,7 +219,6 @@ limiteNoCarrinho = computed(() => {
     return true;
   }
 
-  // Adicionar ao carrinho sem sair da página
   adicionarAoCarrinho(): void {
     const quantidadeAdicionada = Math.min(
       this.quantidade(),
@@ -248,7 +234,6 @@ limiteNoCarrinho = computed(() => {
     }
   }
 
-  // Adicionar e ir para o checkout
   comprarAgora(): void {
     if (this.adicionarSelecionados()) {
       this.router.navigate(['/checkout']);

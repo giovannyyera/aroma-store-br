@@ -1,7 +1,6 @@
 
 <main class="admin-product-form-page">
 
-  <!-- Cabeçalho administrativo -->
   <header class="admin-header">
     <div class="admin-header-content">
 
@@ -24,7 +23,6 @@
 
   <div class="product-form-container">
 
-    <!-- Navegação -->
     <nav class="breadcrumb" aria-label="Navegação">
       <a routerLink="/admin">Painel</a>
       <i class="bi bi-chevron-right"></i>
@@ -37,7 +35,6 @@
       </span>
     </nav>
 
-    <!-- Título -->
     <section class="page-heading">
       <div class="heading-left">
 
@@ -83,7 +80,6 @@
   <span>{{ sucesso() }}</span>
 </div>
 
-    <!-- Formulário principal -->
     <form
       *ngIf="!carregando()"
       #produtoForm="ngForm"
@@ -101,7 +97,6 @@
 
       <div class="form-content">
 
-        <!-- Nome -->
         <div class="form-field">
           <label for="produto-nome">
             Nome do produto <span class="required">*</span>
@@ -126,7 +121,6 @@
           </small>
         </div>
 
-        <!-- Descrição -->
         <div class="form-field">
           <label for="produto-descricao">
             Descrição
@@ -142,7 +136,6 @@
           ></textarea>
         </div>
 
-        <!-- Preço, estoque e categoria -->
         <div class="form-grid">
 
           <div class="form-field">
@@ -209,7 +202,6 @@
 
         </div>
 
-        <!-- Status -->
         <div class="product-status-section">
 
           <div class="status-information">
@@ -238,7 +230,6 @@
 
       </div>
 
-      <!-- Ações -->
       <div class="form-actions">
         <a
           routerLink="/admin/produtos"
@@ -267,7 +258,6 @@
 
     </form>
 
-    <!-- Galeria: somente após cadastrar o produto -->
     <section class="images-panel" *ngIf="produtoId">
 
       <div class="card-heading">
@@ -282,7 +272,6 @@
         </span>
       </div>
 
-      <!-- Upload -->
       <div class="image-upload-section">
 
         <h3>
@@ -366,7 +355,6 @@
 
       </div>
 
-      <!-- Imagens cadastradas -->
       <div class="registered-images">
 
         <div class="registered-heading">

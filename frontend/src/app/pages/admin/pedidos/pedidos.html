@@ -204,7 +204,6 @@
                
 <div class="order-actions">
 
-  <!-- Confirmar -->
   <button
     *ngIf="pedido.status === 'PENDENTE'"
     type="button"
@@ -221,7 +220,6 @@
     }}
   </button>
 
-  <!-- Concluir -->
   <button
     *ngIf="pedido.status === 'CONFIRMADO'"
     type="button"
@@ -238,7 +236,6 @@
     }}
   </button>
 
-  <!-- Cancelar -->
   <button
     *ngIf="
       pedido.status === 'PENDENTE' ||
@@ -258,7 +255,6 @@
     }}
   </button>
 
-  <!-- Finalizado -->
   <span
     *ngIf="
       pedido.status === 'CONCLUIDO' ||
