@@ -1,7 +1,4 @@
-
-/* ==========================================
-   AROMA STORE — ADMIN / PRODUTOS
-========================================== */
+/* Produtos admin */
 
 :host {
   display: block;
@@ -16,12 +13,14 @@
 }
 
 .admin-products *,
+
 .admin-products *::before,
+
 .admin-products *::after {
   box-sizing: border-box;
 }
 
-/* HEADER */
+/* Header */
 
 .admin-header {
   height: 72px;
@@ -95,7 +94,7 @@
   background: rgba(255,255,255,.12);
 }
 
-/* CONTEÚDO */
+/* Conteúdo */
 
 .products-container {
   width: 100%;
@@ -104,7 +103,7 @@
   padding: 36px 36px 70px;
 }
 
-/* TÍTULO */
+/* Título */
 
 .products-heading {
   display: flex;
@@ -175,7 +174,7 @@
   background: #245339;
 }
 
-/* FILTROS */
+/* Filtros */
 
 .products-filter-panel {
   display: flex;
@@ -195,6 +194,7 @@
 }
 
 .filter-search label,
+
 .filter-label {
   display: block;
   margin-bottom: 9px;
@@ -281,6 +281,7 @@
 }
 
 .filter-button:hover,
+
 .filter-button.active {
   background: #eaf2e9;
   border-color: #9fbca5;
@@ -301,7 +302,7 @@
   background: #b64d59;
 }
 
-/* PAINEL DE PRODUTOS */
+/* Painel de produtos */
 
 .products-panel {
   padding: 15px;
@@ -341,7 +342,7 @@
   white-space: nowrap;
 }
 
-/* TABELA */
+/* Tabela */
 
 .table-wrapper {
   width: 100%;
@@ -397,7 +398,7 @@
   background: #fafcf9;
 }
 
-/* IMAGEM */
+/* Imagem */
 
 .product-thumbnail {
   display: flex;
@@ -420,7 +421,7 @@
   object-fit: cover;
 }
 
-/* DADOS */
+/* Dados */
 
 .product-id {
   color: #738275;
@@ -447,7 +448,7 @@
   white-space: nowrap;
 }
 
-/* ESTOQUE */
+/* Estoque */
 
 .stock-badge {
   display: inline-flex;
@@ -475,7 +476,7 @@
   color: #a94450;
 }
 
-/* STATUS */
+/* Status */
 
 .status-badge {
   display: inline-flex;
@@ -513,7 +514,7 @@
   background: #b84b55;
 }
 
-/* AÇÕES */
+/* Ações */
 
 .product-actions {
   display: flex;
@@ -572,9 +573,10 @@
   background: #edf7ee;
 }
 
-/* ESTADOS */
+/* Estados */
 
 .products-loading,
+
 .products-empty {
   min-height: 200px;
   display: flex;
@@ -667,21 +669,21 @@
   font-size: 11px;
 }
 
-/* FOCO */
+/* Foco */
 
 .admin-products a:focus-visible,
+
 .admin-products button:focus-visible {
   outline: 3px solid #8cb49a;
   outline-offset: 3px;
 }
 
-/* RESPONSIVIDADE */
+/* Responsividade */
 
 @media (max-width: 1100px) {
   .products-filter-panel {
     align-items: stretch;
   }
-
   .filter-search {
     width: 100%;
   }
@@ -691,19 +693,15 @@
   .admin-header-content {
     padding: 0 24px;
   }
-
   .products-container {
     padding: 30px 24px 60px;
   }
-
   .brand-name {
     font-size: 22px;
   }
-
   .admin-header-title {
     font-size: 18px;
   }
-
   .heading-text h1 {
     font-size: 29px;
   }
@@ -713,90 +711,70 @@
   .admin-header {
     height: 65px;
   }
-
   .admin-header-content {
     padding: 0 16px;
   }
-
   .admin-brand {
     gap: 10px;
   }
-
   .brand-icon {
     font-size: 20px;
   }
-
   .brand-name {
     font-size: 21px;
   }
-
   .brand-divider,
   .admin-header-title {
     display: none;
   }
-
   .products-container {
     padding: 26px 14px 50px;
   }
-
   .products-heading {
     flex-direction: column;
     align-items: stretch;
     gap: 19px;
   }
-
   .heading-left {
     gap: 13px;
   }
-
   .heading-icon {
     width: 49px;
     height: 49px;
     flex-basis: 49px;
     font-size: 23px;
   }
-
   .heading-text h1 {
     font-size: 28px;
   }
-
   .heading-text p {
     font-size: 12px;
   }
-
   .new-product-button {
     width: 100%;
     min-height: 43px;
   }
-
   .products-filter-panel {
     padding: 15px;
   }
-
   .status-filter-buttons {
     width: 100%;
   }
-
   .filter-button {
     flex: 1;
   }
-
   .products-panel {
     padding: 10px;
   }
-
   .panel-top h2 {
     font-size: 14px;
   }
-
   .products-total {
     font-size: 10px;
   }
-
   .products-table th {
     padding: 10px 12px;
   }
-
   .products-table td {
     padding: 10px 12px;
   }
@@ -806,7 +784,6 @@
   .loading-spinner {
     animation: none;
   }
-
   .admin-products * {
     transition: none !important;
   }

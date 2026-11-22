@@ -127,8 +127,7 @@
   </a>
 </section>
 
-
-    <div
+<div
       class="cart-layout"
       *ngIf="carrinhoService.itens().length > 0"
     >
@@ -150,7 +149,18 @@
         >
 
           <div class="product-image">
-            <span>AROMA STORE</span>
+
+            <img
+              *ngIf="item.produto.imagem_principal"
+              [src]="item.produto.imagem_principal"
+              [alt]="item.produto.nome"
+              loading="lazy"
+            />
+
+  <span *ngIf="!item.produto.imagem_principal">
+    AROMA STORE
+  </span>
+
           </div>
 
           <div class="product-details">

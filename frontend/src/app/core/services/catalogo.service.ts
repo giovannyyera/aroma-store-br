@@ -21,18 +21,16 @@ export class CatalogoService {
 
   constructor(private http: HttpClient) {}
 
-  // Listar categorias cadastradas no Django
   listarCategorias(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>(
       `${this.apiUrl}/categorias/`
     );
   }
 
-  // Listar produtos com paginação e categoria
   listarProdutos(
     page: number = 1,
     categoria: number | null = null,
-    pageSize: number = 20
+    pageSize: number = 8
   ): Observable<PaginatedResponse<Produto>> {
 
     let params = new HttpParams()
@@ -52,7 +50,6 @@ export class CatalogoService {
     );
   }
 
-  // Buscar detalhes de um produto
   buscarProduto(id: number): Observable<Produto> {
     return this.http.get<Produto>(
       `${this.apiUrl}/produtos/${id}/`

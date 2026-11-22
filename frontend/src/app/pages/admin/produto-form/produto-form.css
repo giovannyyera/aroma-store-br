@@ -1,7 +1,4 @@
-
-/* ==========================================
-   AROMA STORE — ADMIN / PRODUTO FORM
-========================================== */
+/* Formulário de produtos */
 
 :host {
   display: block;
@@ -22,7 +19,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+/* Header */
 
 .admin-header {
   height: 72px;
@@ -91,7 +88,7 @@
   background: rgba(255,255,255,.1);
 }
 
-/* CONTEÚDO */
+/* Conteúdo */
 
 .product-form-container {
   width: 100%;
@@ -124,7 +121,7 @@
   font-weight: 600;
 }
 
-/* TÍTULO */
+/* Título */
 
 .page-heading {
   margin-bottom: 25px;
@@ -163,7 +160,7 @@
   font-size: 13px;
 }
 
-/* CARDS */
+/* Cards */
 
 .product-form-card,
 .images-panel {
@@ -203,7 +200,7 @@
   white-space: nowrap;
 }
 
-/* FORMULÁRIO */
+/* Formulário */
 
 .form-content {
   display: flex;
@@ -314,7 +311,7 @@
   box-shadow: none;
 }
 
-/* STATUS */
+/* Status */
 
 .product-status-section {
   display: flex;
@@ -396,7 +393,7 @@
   font-weight: 600;
 }
 
-/* BOTÕES */
+/* Botões */
 
 .form-actions {
   display: flex;
@@ -448,7 +445,7 @@
   cursor: not-allowed;
 }
 
-/* GALERIA DE IMAGENS */
+/* Galeria de imagens */
 
 .images-counter {
   padding: 6px 10px;
@@ -526,7 +523,7 @@
   accent-color: #153c29;
 }
 
-/* IMAGENS CADASTRADAS */
+/* Imagens cadastradas */
 
 .registered-images {
   padding: 24px 27px 27px;
@@ -663,7 +660,7 @@
   font-size: 29px;
 }
 
-/* ERROS E CARREGAMENTO */
+/* Erros e carregamento */
 
 .form-error {
   display: flex;
@@ -705,7 +702,7 @@
   to { transform: rotate(360deg); }
 }
 
-/* VOLTAR */
+/* Voltar */
 
 .back-products {
   display: inline-flex;
@@ -721,7 +718,7 @@
   text-decoration: underline;
 }
 
-/* RESPONSIVIDADE */
+/* Responsividade */
 
 @media (max-width: 950px) {
   .admin-header-content {
@@ -857,17 +854,16 @@
     animation: none;
   }
 }
+
 .form-success {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 19px;
   padding: 13px 15px;
-
   background: #edf7ee;
   border: 1px solid #cce5d0;
   border-radius: 7px;
-
   color: #286c3c;
   font-size: 12px;
 }
@@ -876,4 +872,4 @@
 .delete-image-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}   
+}

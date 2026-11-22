@@ -1,8 +1,9 @@
-
 :host {
   display: block;
   min-height: 100vh;
 }
+
+/* Dashboard */
 
 .admin-dashboard {
   min-height: 100vh;
@@ -11,9 +12,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===================================
-   HEADER ADMINISTRATIVO
-=================================== */
+/* Header administrativo */
 
 .admin-header {
   background: #153c29;
@@ -68,7 +67,7 @@
   white-space: nowrap;
 }
 
-/* Sair */
+/* Botão sair */
 
 .logout-button {
   display: inline-flex;
@@ -104,9 +103,7 @@
   color: #153c29;
 }
 
-/* ===================================
-   CONTEÚDO PRINCIPAL
-=================================== */
+/* Conteúdo principal */
 
 .dashboard-content {
   width: 100%;
@@ -115,7 +112,7 @@
   padding: 110px 40px 100px;
 }
 
-/* Mensagem de login */
+/* Mensagem de boas-vindas */
 
 .welcome-message {
   width: fit-content;
@@ -142,9 +139,7 @@
   font-size: 30px;
 }
 
-/* ===================================
-   GRID DE CARDS
-=================================== */
+/* Grid dos cards */
 
 .dashboard-grid {
   display: grid;
@@ -152,7 +147,7 @@
   gap: 20px;
 }
 
-/* Card */
+/* Cards */
 
 .dashboard-card {
   min-height: 190px;
@@ -203,7 +198,9 @@
   border-radius: 15px;
   color: #153c29;
   font-size: 33px;
-}.card-icon {
+}
+
+.card-icon {
   width: 72px;
   height: 72px;
   flex: 0 0 72px;
@@ -231,9 +228,7 @@
   color: #153c29;
 }
 
-/* ===================================
-   RESPONSIVIDADE
-=================================== */
+/* Responsividade */
 
 @media (max-width: 1200px) {
   .admin-header-content {
@@ -412,6 +407,8 @@
     font-size: 19px;
   }
 }
+
+/* Redução de animações */
 
 @media (prefers-reduced-motion: reduce) {
   .dashboard-card,

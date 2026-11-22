@@ -3,6 +3,8 @@
   display: block;
 }
 
+/* Página de login */
+
 .admin-login-page {
   min-height: 100vh;
   display: flex;
@@ -13,6 +15,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Card de login */
+
 .login-card {
   width: 100%;
   max-width: 420px;
@@ -22,6 +26,8 @@
   border-radius: 14px;
   box-shadow: 0 12px 35px rgba(32, 58, 46, 0.05);
 }
+
+/* Cabeçalho */
 
 .login-header {
   margin-bottom: 34px;
@@ -56,11 +62,15 @@
   line-height: 1.6;
 }
 
+/* Formulário */
+
 .login-card form {
   display: flex;
   flex-direction: column;
   gap: 23px;
 }
+
+/* Campos */
 
 .form-field {
   display: flex;
@@ -97,6 +107,8 @@
   box-shadow: 0 0 0 3px rgba(32, 58, 46, 0.08);
 }
 
+/* Mensagem de erro */
+
 .login-error {
   padding: 12px 14px;
   background: #fff1f2;
@@ -106,6 +118,8 @@
   font-size: 12px;
   line-height: 1.5;
 }
+
+/* Botão de login */
 
 .login-button {
   width: 100%;
@@ -131,6 +145,8 @@
   opacity: 0.65;
   cursor: not-allowed;
 }
+
+/* Responsividade */
 
 @media (max-width: 480px) {
   .admin-login-page {

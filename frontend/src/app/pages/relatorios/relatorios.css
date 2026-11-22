@@ -1,7 +1,4 @@
-
-/* ==========================================
-   AROMA STORE — RELATÓRIOS ADMINISTRATIVOS
-========================================== */
+/* Relatórios administrativos */
 
 :host {
   display: block;
@@ -22,9 +19,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ==========================================
-   HEADER
-========================================== */
+/* Header */
 
 .admin-header {
   height: 72px;
@@ -97,9 +92,7 @@
   background: rgba(255, 255, 255, .1);
 }
 
-/* ==========================================
-   CONTEÚDO
-========================================== */
+/* Conteúdo */
 
 .reports-container {
   width: 100%;
@@ -108,7 +101,7 @@
   padding: 36px 36px 70px;
 }
 
-/* TÍTULO */
+/* Título */
 
 .reports-heading {
   display: flex;
@@ -151,9 +144,7 @@
   line-height: 1.5;
 }
 
-/* ==========================================
-   TÍTULOS DE SEÇÃO
-========================================== */
+/* Títulos de seção */
 
 .section-heading {
   margin-bottom: 17px;
@@ -173,9 +164,7 @@
   font-size: 12px;
 }
 
-/* ==========================================
-   CARDS — RESUMO GERAL
-========================================== */
+/* Cards — resumo geral */
 
 .summary-section {
   margin-bottom: 31px;
@@ -298,9 +287,7 @@
   border-color: #326b48;
 }
 
-/* ==========================================
-   PAINÉIS DE RELATÓRIOS
-========================================== */
+/* Painéis de relatórios */
 
 .report-panel {
   margin-bottom: 22px;
@@ -362,9 +349,7 @@
   white-space: nowrap;
 }
 
-/* ==========================================
-   TABELAS
-========================================== */
+/* Tabelas */
 
 .table-wrapper {
   width: 100%;
@@ -456,9 +441,7 @@
   font-size: 11px;
 }
 
-/* ==========================================
-   TABELA MENSAL
-========================================== */
+/* Tabela mensal */
 
 .monthly-table {
   min-width: 850px;
@@ -487,9 +470,7 @@
   color: #245b37;
 }
 
-/* ==========================================
-   ESTADO VAZIO
-========================================== */
+/* Estado vazio */
 
 .report-empty {
   min-height: 145px;
@@ -512,9 +493,7 @@
   font-size: 12px;
 }
 
-/* ==========================================
-   ERROS E CARREGAMENTO
-========================================== */
+/* Erros e carregamento */
 
 .reports-error {
   display: flex;
@@ -558,9 +537,7 @@
   }
 }
 
-/* ==========================================
-   RESPONSIVIDADE
-========================================== */
+/* Responsividade */
 
 @media (max-width: 1250px) {
   .summary-grid {
@@ -572,19 +549,15 @@
   .admin-header-content {
     padding: 0 24px;
   }
-
   .reports-container {
     padding: 30px 24px 60px;
   }
-
   .brand-name {
     font-size: 22px;
   }
-
   .admin-header-title {
     font-size: 18px;
   }
-
   .heading-text h1 {
     font-size: 29px;
   }
@@ -594,111 +567,86 @@
   .admin-header {
     height: 65px;
   }
-
   .admin-header-content {
     padding: 0 16px;
   }
-
   .admin-brand {
     gap: 10px;
   }
-
   .brand-icon {
     font-size: 20px;
   }
-
   .brand-name {
     font-size: 21px;
   }
-
   .brand-divider,
   .admin-header-title {
     display: none;
   }
-
   .reports-container {
     padding: 26px 14px 50px;
   }
-
   .reports-heading {
     margin-bottom: 24px;
   }
-
   .heading-left {
     gap: 13px;
   }
-
   .heading-icon {
     width: 49px;
     height: 49px;
     flex-basis: 49px;
     font-size: 23px;
   }
-
   .heading-text h1 {
     font-size: 28px;
   }
-
   .heading-text p {
     font-size: 12px;
   }
-
   .summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
-
   .summary-card {
     min-height: 147px;
     padding: 14px;
   }
-
   .summary-value {
     font-size: 25px;
   }
-
   .revenue-value {
     font-size: 18px;
   }
-
   .section-heading h2 {
     font-size: 20px;
   }
-
   .report-panel {
     padding: 10px;
   }
-
   .panel-heading {
     gap: 10px;
   }
-
   .panel-title {
     gap: 9px;
   }
-
   .panel-icon {
     width: 33px;
     height: 33px;
     flex-basis: 33px;
   }
-
   .panel-title h2 {
     font-size: 13px;
   }
-
   .panel-title p {
     font-size: 10px;
   }
-
   .panel-count {
     font-size: 10px;
   }
-
   .report-table th {
     padding: 10px 12px;
   }
-
   .report-table td {
     padding: 11px 12px;
   }
@@ -714,11 +662,11 @@
   .loading-spinner {
     animation: none;
   }
-
   .summary-card {
     transition: none;
   }
 }
+
 .reports-error > span {
   flex: 1;
 }
@@ -728,20 +676,16 @@
   align-items: center;
   justify-content: center;
   gap: 7px;
-
   min-height: 32px;
   padding: 0 12px;
-
   border: 1px solid #dba9af;
   border-radius: 6px;
   background: #ffffff;
-
   color: #a04150;
   font-family: inherit;
   font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
-
   cursor: pointer;
 }
 
@@ -758,7 +702,6 @@
   .reports-error {
     flex-wrap: wrap;
   }
-
   .retry-button {
     width: 100%;
   }
